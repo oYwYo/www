@@ -1,0 +1,67 @@
+<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image"/>
+      </swiper-item>
+    </block>
+</swiper>
+
+<view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+
+      <!--Tab布局1-->
+      <view class="tabNav">
+    <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}"><text>{{item}}</text></view>
+</view>
+
+      <!--Tab布局2-->
+      <view class='parameter-wrap'>
+         <block wx:for="{{parameter}}" wx:key="parameter">
+           <text class='parameter-info text-over {{item.checked?"checked_parameter":""}}' data-id='{{item.id}}' bindtap='parameterTap'>{{item.name}}</text>
+         </block>
+      </view>
+ 
+      <!--内容布局-->
+      <view id="tab1" class="{{tab1}}">
+        <view class="language">
+          <block wx:for="{{items}}" wx:key="item">
+            <view class="language-list">
+              <!-- <navigator url="/pages/images/photo?id={{item.id}}"> -->
+                <view class="language-list-info" index="{{index}}">
+                  <image class="language-list-photo" src="{{item.imageUrl}}"/>
+                  <view class="view-count">
+                     <text class="view-count-text">{{item.view_count}}阅读</text>
+                  </view>
+                  <text class="language-list-desc">{{item.content}}</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          </block>
+        </view>
+      </view>
+
+      <view id="tab2" class="{{tab2}}">
+        <view class="lesson">
+          <block wx:for="{{lessons}}" wx:key="item">
+            <view class="lesson-list">
+              <!-- <navigator url="/pages/images/photo?id={{item.id}}"> -->
+                <view class="lesson_today_text" index="{{index}}">
+                  <image class="lesson-list-photo" src="{{item.imageUrl}}"/>
+                  <cover-image class="icon-small" src='../images/line.png' size="23"></cover-image>
+                  <text class="must">要求：</text>
+                  <view class="date-count">
+                     <text class="date-count-text">{{item.date_count}}天内完成</text>
+                  </view>
+                  <text class="start">开始练习></text>
+                  <text class="lesson-list-desc">{{item.title}}</text>
+                </view>
+              <!-- </navigator> -->
+            </view>
+          </block>
+        </view>
+      </view>
+
+    </scroll-view>
+</view>

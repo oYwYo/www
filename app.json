@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/login/login",
+    
+    "pages/lesson/lesson",
+    "pages/myexercises/myexercises",
+    "pages/mylessons/mylessons",
+    "pages/mymessages/mymessages",
+    "pages/myquestions/myquestions",
+    "pages/myrecents/myrecents",
+    "pages/mine/mine",
+
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "少儿教育",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/home/home",
+      "text": "首页",
+      "iconPath": "./pages/images/home_light.png",
+      "selectedIconPath": "./pages/images/home_fill_light.png",
+      "selectedColor": "#fa960a"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的",
+      "iconPath":"./pages/images/my.png",
+      "selectedIconPath": "./pages/images/my_fill.png",
+      "selectedColor": "#fa960a"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

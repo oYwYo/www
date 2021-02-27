@@ -1,0 +1,256 @@
+.slide-image{
+  width:100%;
+  height:400rpx;
+}
+
+.container {
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+ 
+.title {
+  width: 100%;
+  height: 88rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+ 
+.title-sel {
+  color: #999;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.title-sel  .line-style{
+  background: #fff;
+  height: 6rpx;
+  width: 40rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+ 
+.title-sel-selected{
+  color: #333;
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title-sel-selected .line-style{
+  background: #333;
+  height: 6rpx;
+  width: 90rpx;
+  position: relative;
+  margin-top: 10rpx;
+}
+
+.tabNav {
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;
+  display: flex;
+  padding: 0 200rpx;
+  border-bottom: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  color:gray;
+  margin-bottom: 20rpx;
+}
+
+.tabNav> view {
+  text-align: center;
+  margin-right: 35rpx;
+}
+
+.tabNav> view:last-child {
+  margin-right: 0;
+}
+
+.tabNav> view text {
+  padding: 0 15rpx;
+  height: 75rpx;
+  display: inline-block;
+}
+
+.tabNav .cur text {
+  border-bottom: 5rpx solid #000;
+  color: #000;
+}
+.tabshow{
+   visibility: visible;
+   display: block;
+}
+.tabhide{
+   visibility: hidden;
+   display: none;
+}
+
+.selflearn{
+  margin-top: 25rpx;
+  padding: 0rpx 40rpx 0rpx;
+
+}
+
+.parameter-info {
+  border: 1px #ebebeb;
+  border-radius: 12px;
+  padding: 10rpx 40rpx 10rpx;
+  justify-content: center;
+  background-color: #ebebeb;
+  margin-left: 35rpx;
+  font-size: xx-small;
+  font-weight: 200;
+}
+
+.checked_parameter{
+  background: #f5a614;
+  padding: 10rpx 40rpx 10rpx;
+  border-radius: 12px;
+}
+
+.languagelist-head-img{
+  width: 100%;
+  height: 180rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+
+.language{
+  margin-top: 10rpx;
+}
+
+.language-list-info{
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.language-list-photo{
+  width: 350rpx;
+  height: 250rpx;
+  border-radius: 10rpx;
+}
+
+.language-list-desc{
+  display: block;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  width: 94%;
+  text-align: center;
+  font-size: 25rpx;
+  padding: 10rpx;
+  opacity: 0.7;
+  border-radius: 10rpx;
+}
+
+.view-count {
+  position: absolute;
+  right: 5rpx;
+  top: 10rpx;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  font-size: 16rpx;
+}
+
+.view-count-text {
+  color: #fff;
+}
+
+.lesson{
+  margin-top: 30rpx;
+}
+
+.lesson-list {
+  justify-content: center;
+  margin:0 auto;
+  width: 90%;
+  position: relative;
+  background-color: #fff;
+  border: 2px solid rgb(75, 75, 75);
+  border-radius: 10px;
+  margin-top: 15rpx;
+}
+
+.lesson_today_text {
+  position: relative;
+  color: rgb(15, 15, 15);
+}
+
+.lesson-list-photo{
+  width: 500rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+
+.lesson-list-desc{
+  display: block;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  bottom: 0%;
+  left: 0;
+  width: 97%;
+  text-align: center;
+  font-size: 25rpx;
+  padding: 10rpx;
+  opacity: 0.7;
+  border-radius: 10rpx;
+}
+
+.must {
+  position: absolute;
+  right: 60rpx;
+  top: 30rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+
+.date-count {
+  position: absolute;
+  right: 17rpx;
+  top: 90rpx;
+  background:#f5a614;
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 23rpx;
+}
+
+.date-count-text {
+  color: #fff;
+}
+
+.start {
+  position: absolute;
+  right: 14rpx;
+  top: 170rpx;
+  background-color: #fff;
+  border: 1px solid #f5a614;
+  padding: 10rpx 20rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  color: #f5a614;
+}
+
+.icon-small
+{
+    display: inline-block;
+    vertical-align: top;
+    width: 1px;
+    height:150px;
+}

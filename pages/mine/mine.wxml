@@ -1,0 +1,70 @@
+	<view class='user-container'>
+		<view class='user-info'>
+			<view><image animation="{{animationData}}" class="userinfo-avatar" src="{{avatarUrl}}"></image></view>
+			<view><text class="userinfo-nickname">{{nickName}}</text></view>
+		</view>
+  </view>
+	
+	<view class="line1"/>
+
+	<view class="menu_bg">
+		<view bindtap="mylesson" class="category_bg">
+			<view class='menu_item' hover-class="menu_item_hover">
+				<view class="icon-text-container">
+					<image class="icon" src="../images/my_lesson.png"></image>
+					<text class="category_text">我的课程</text>
+        </view>
+				<view>
+					<image class="logo" src="../images/next_step.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="line2"/>
+		<view bindtap="myrecent" class="category_bg">
+			<view class='menu_item' hover-class="menu_item_hover">
+				<view class="icon-text-container">
+					<image class="icon" src="../images/my_recent.png"></image>
+					<text class="category_text">最近学习</text>
+				</view>
+				<view>
+					<image class="logo" src="../images/next_step.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="line2"/>
+		<view bindtap="myexercise" class="category_bg">
+			<view class='menu_item' hover-class="menu_item_hover">
+				<view class="icon-text-container">
+          <image class="icon" src="../images/my_exercise.png"></image>
+					<text class="category_text">我的练习</text>
+				</view>
+				<view>
+					<image class="logo" src="../images/next_step.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="line2"/>
+		<view bindtap="mymessage" class="category_bg">
+			<view class='menu_item' hover-class="menu_item_hover">
+				<view class="icon-text-container">
+					<image class="icon" src="../images/my_message.png"></image>
+					<text class="category_text">消息通知</text>
+				</view>
+				<view>
+					<image class="logo" src="../images/next_step.png"></image>
+				</view>
+			</view>
+		</view>
+		<view class="line2"/>
+		<view bindtap="myquestion" class="category_bg">
+			<view class='menu_item' hover-class="menu_item_hover">
+				<view class="icon-text-container">
+					<image class="icon" src="../images/my_question.png"></image>
+					<text class="category_text">联系客服</text>
+				</view>
+				<view>
+					<image class="logo" src="../images/next_step.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
