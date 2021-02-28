@@ -1,0 +1,153 @@
+.slide-image{
+  width:100%;
+  height:350rpx;
+}
+.tabNav {
+
+
+  width: 100%;
+  height: 80rpx;
+  line-height: 60rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 200rpx;
+  border-bottom: 1px solid #f5f5f5;
+  box-sizing: border-box;
+  color:gray;
+  margin-bottom: 20rpx;
+}
+
+.tabNav> view {
+  text-align: center;
+  margin-right: 35rpx;
+}
+
+.tabNav> view:last-child {
+  margin-right: 0;
+}
+
+.tabNav> view text {
+  padding: 0 50rpx;
+  height: 60rpx;
+  display: inline-block;
+}
+
+.tabNav .cur text {
+  border-bottom: 5rpx solid #000;
+  color: #000;
+}
+.tabshow{
+   visibility: visible;
+   display: block;
+}
+.tabhide{
+   visibility: hidden;
+   display: none;
+}
+.record{
+  justify-content: center;
+  display: flex;
+}
+.record-image{
+  margin-top: 20rpx;
+  width: 90%;
+  height: 380rpx;
+  margin-left: 5%;
+  border-radius: 15rpx;
+  border: 1px solid #000;
+}
+.record-img{
+  border-radius: 15rpx;
+  width: 100%;
+  height: 100%;
+}
+.button-group-cls{
+  display: flex;
+  flex-direction: row;
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+  
+}
+.original1{
+  /* position: absolute; */
+  border: 1px solid #f5a614;
+  line-height: 56rpx;
+  padding: 0rpx;
+  width: 320rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #000;
+  font-weight: 300;
+  margin-left: 15rpx;
+}
+.original2{
+  /* position: absolute; */
+  background-color: #f5a614;
+  line-height: 56rpx;
+  padding: 2rpx;
+  width: 165rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #000;
+  font-weight: 300;
+  margin-left: 10rpx;
+}
+.original3{
+  /* position: absolute; */
+  background-color: #f5a614;
+  line-height: 56rpx;
+  padding: 2rpx;
+  width: 310rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #000;
+  font-weight: 300;
+  margin-left: 10rpx;
+}
+.original4{
+  /* position: absolute; */
+  border: 1px solid #f5a614;
+  line-height: 56rpx;
+  padding: 3rpx;
+  width: 660rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  color: #000;
+  font-weight: 300;
+  margin-left: 15rpx;
+}
+
+.big{
+  display: flex;
+  flex-direction: column;
+}
+
+.img{
+  display: inline-block;
+}
+ 
+.pic {
+  float:left;
+  position:relative;
+  margin-right:10rpx;
+  width: 300rpx;
+  height: 300rpx;
+  margin-left:25rpx;
+  margin-top:20rpx;
+}
+
+.weui-uploader__bd{
+  margin-left:40rpx;
+}
+ 
+.delete-btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.weui-uploader__img{
+  width: 300rpx;
+  height: 300rpx;
+}

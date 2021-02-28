@@ -24,7 +24,7 @@ Page({
       },
       {
         "id": "2",
-        "imageUrl": "../images/nanjing.jpg",
+        "imageUrl": "../images/nanjing.png",
         "content": "南京话",
         "view_count": "200",
       },
@@ -43,14 +43,14 @@ Page({
     ],
     "lessons": [{
         "id": "1",
-        "imageUrl": "../images/01.jpg",
+        "imageUrl": "../images/nanjing1.png",
         "title": "南京话-基础班-红楼梦第一章01",
         "date_count": "5",
         "state": 1,
       },
       {
         "id": "2",
-        "imageUrl": "../images/02.jpg",
+        "imageUrl": "../images/nanjing2.png",
         "title": "南京话-基础班-红楼梦第一章02",
         "date_count": "4",
         "state": 0,
@@ -106,7 +106,12 @@ Page({
       });
     }
   },
-
+  gotoex: function () {
+    console.log("开始练习")
+    wx.navigateTo({
+      url: '../exercise/exercise',
+    })
+  },
 
   onLoad: function (options) {
     this.data.parameter[0].checked = true;
