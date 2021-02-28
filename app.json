@@ -1,8 +1,11 @@
 {
   "pages":[
-    "pages/mine/mine",
-    "pages/login/login",
     "pages/home/home",
+    "pages/login/login",
+
+    "pages/mine/mine",
+    
+    
     "pages/lesson/lesson",
     "pages/myexercises/myexercises",
     "pages/mylessons/mylessons",

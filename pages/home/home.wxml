@@ -26,7 +26,7 @@
       <!--内容布局-->
       <view id="tab1" class="{{tab1}}">
         <view class="language">
-          <block wx:for="{{items}}" wx:key="item">
+          <block wx:for="{{chosen_items}}" wx:key="item">
             <view class="language-list">
               <!-- <navigator url="/pages/images/photo?id={{item.id}}"> -->
                 <view data-courseid="{{index}}" bindtap="gotolesson" class="language-list-info" index="{{index}}">

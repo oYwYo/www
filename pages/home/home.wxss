@@ -1,6 +1,6 @@
 .slide-image{
   width:100%;
-  height:400rpx;
+  height:350rpx;
 }
 
 .container {
@@ -104,18 +104,19 @@
 .parameter-info {
   border: 1px #ebebeb;
   border-radius: 12px;
-  padding: 10rpx 40rpx 10rpx;
+  padding: 10rpx 30rpx 10rpx;
   justify-content: center;
   background-color: #ebebeb;
-  margin-left: 35rpx;
-  font-size: xx-small;
+  margin-left: 30rpx;
+  font-size: small;
   font-weight: 200;
 }
 
 .checked_parameter{
   background: #f5a614;
-  padding: 10rpx 40rpx 10rpx;
+  padding: 10rpx 30rpx 10rpx;
   border-radius: 12px;
+  font-weight: 400;
 }
 
 .languagelist-head-img{

@@ -1,6 +1,6 @@
 // pages/mine/mine.js
 Page({
- 
+
   /**
    * 页面的初始数据
    */
@@ -15,8 +15,8 @@ Page({
     imgUrls: [
       '../images/main.png', '../images/main.png',
     ],
-    "items": [
-      {
+    chosen_items: "",
+    "items": [{
         "id": "1",
         "imageUrl": "../images/shanghai.jpg",
         "content": "上海话",
@@ -41,34 +41,48 @@ Page({
         "view_count": "400",
       },
     ],
-      "lessons": [
-        {
-          "id": "1",
-          "imageUrl": "../images/01.jpg",
-          "title": "南京话-基础班-红楼梦第一章01",
-          "date_count": "5",
-          "state": 1,
-        },
-        {
-          "id": "2",
-          "imageUrl": "../images/02.jpg",
-          "title": "南京话-基础班-红楼梦第一章02",
-          "date_count": "4",
-          "state": 0,
-        },
+    "lessons": [{
+        "id": "1",
+        "imageUrl": "../images/01.jpg",
+        "title": "南京话-基础班-红楼梦第一章01",
+        "date_count": "5",
+        "state": 1,
+      },
+      {
+        "id": "2",
+        "imageUrl": "../images/02.jpg",
+        "title": "南京话-基础班-红楼梦第一章02",
+        "date_count": "4",
+        "state": 0,
+      },
     ],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    parameter: [{ id: 1, name: '上海话' }, { id: 2, name: '南京话' },{ id: 3, name: '四川话' },{ id: 4, name: '粤语' }],
+    parameter: [{
+      id: -1,
+      name: '全部'
+    }, {
+      id: 0,
+      name: '上海话'
+    }, {
+      id: 1,
+      name: '南京话'
+    }, {
+      id: 2,
+      name: '四川话'
+    }, {
+      id: 3,
+      name: '粤语'
+    }],
     navTab: ['自主学习', '今日练习'],
     currentTab: 0,
-    sendList: ['AA','BB'],
-    tab1:'tabshow',
-    tab2:'tabhide',
+    sendList: ['AA', 'BB'],
+    tab1: 'tabshow',
+    tab2: 'tabhide',
   },
- 
+
   currentTab: function (e) {
     if (this.data.currentTab == e.currentTarget.dataset.idx) {
       return;
@@ -76,65 +90,78 @@ Page({
     this.setData({
       currentTab: e.currentTarget.dataset.idx
     })
-    if (e.currentTarget.dataset.idx==0)
-    {
-      this.setData({ tab1: "tabshow" });
-      this.setData({ tab2: "tabhide" });
-    } else if (e.currentTarget.dataset.idx == 1)
-    {
-      this.setData({ tab1: "tabhide" });
-      this.setData({ tab2: "tabshow" });
+    if (e.currentTarget.dataset.idx == 0) {
+      this.setData({
+        tab1: "tabshow"
+      });
+      this.setData({
+        tab2: "tabhide"
+      });
+    } else if (e.currentTarget.dataset.idx == 1) {
+      this.setData({
+        tab1: "tabhide"
+      });
+      this.setData({
+        tab2: "tabshow"
+      });
     }
   },
- 
 
-    onLoad: function (options) {
-     this.data.parameter[0].checked = true;
+
+  onLoad: function (options) {
+    this.data.parameter[0].checked = true;
+    this.setData({
+      chosen_items: this.data.items,
+      parameter: this.data.parameter,
+    })
+  },
+  parameterTap: function (e) {
+    var that = this
+    var this_checked = e.currentTarget.dataset.id
+    var parameterList = this.data.parameter
+    if (this_checked != -1) {
       this.setData({
-        parameter: this.data.parameter,
+        chosen_items: [this.data.items[this_checked]]
       })
-    },
-    parameterTap:function(e){
-      var that=this
-      var this_checked = e.currentTarget.dataset.id
-      var parameterList = this.data.parameter
-      for (var i = 0; i < parameterList.length;i++){
-        if (parameterList[i].id == this_checked){
-          parameterList[i].checked = true;
-        }
-        else{
-          parameterList[i].checked = false;
-        }
+    } else {
+      this.setData({
+        chosen_items: this.data.items
+      })
+    }
+    for (var i = 0; i < parameterList.length; i++) {
+      if (parameterList[i].id == this_checked) {
+        parameterList[i].checked = true;
+      } else {
+        parameterList[i].checked = false;
       }
-      that.setData({
-        parameter: parameterList
-      })
-    },
+    }
+    that.setData({
+      parameter: parameterList
+    })
+  },
 
-    gotolesson:function(event)
-    {
-      var courseid = event.currentTarget.dataset.courseid;
-      console.log(courseid)
-      wx.showModal({
-         content: '确定要报名该课程？',
-         showCancel: true,//是否显示取消按钮
-         cancelText:"否",//默认是“取消”
-         confirmText:"是",//默认是“确定”
-         confirmColor: '#f5a614',//确定文字的颜色
-         success: function (res) {
-            if (res.cancel) {
-               //点击取消,默认隐藏弹框
-            } else {
-               //点击确定
-               console.log("进入课程")
-               wx.navigateTo({
-                 url: '../lesson/lesson?id='+courseid,
-               })
-            }
-            
-         },
-      })
-    },
+  gotolesson: function (event) {
+    var courseid = event.currentTarget.dataset.courseid;
+    console.log(courseid)
+    wx.showModal({
+      content: '确定要报名该课程？',
+      showCancel: true, //是否显示取消按钮
+      cancelText: "否", //默认是“取消”
+      confirmText: "是", //默认是“确定”
+      confirmColor: '#f5a614', //确定文字的颜色
+      success: function (res) {
+        if (res.cancel) {
+          //点击取消,默认隐藏弹框
+        } else {
+          //点击确定
+          console.log("进入课程")
+          wx.navigateTo({
+            url: '../lesson/lesson?id=' + courseid,
+          })
+        }
+
+      },
+    })
+  },
 
 })
-
