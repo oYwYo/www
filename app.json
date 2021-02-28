@@ -1,16 +1,14 @@
 {
   "pages":[
-    "pages/home/home",
+    "pages/mine/mine",
     "pages/login/login",
-    
+    "pages/home/home",
     "pages/lesson/lesson",
     "pages/myexercises/myexercises",
     "pages/mylessons/mylessons",
     "pages/mymessages/mymessages",
     "pages/myquestions/myquestions",
     "pages/myrecents/myrecents",
-    "pages/mine/mine",
-
     "pages/logs/logs"
   ],
   "window":{

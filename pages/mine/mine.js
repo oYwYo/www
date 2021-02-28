@@ -16,29 +16,17 @@ Page({
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
+    var userinfo = wx.getStorageSync('userinfo')
+    if (userinfo) {
       this.setData({
-        userInfo: app.globalData.userInfo,
+        userInfo: userinfo,
+        avatarUrl: userinfo.avatarUrl,
+        nickName: userinfo.nickName,
         hasUserInfo: true
       })
-    } else if (this.data.canIUse){
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
     }
+    console.log(this.data.userInfo)
+    
   },
   getUserInfo: function(e) {
     console.log(e)

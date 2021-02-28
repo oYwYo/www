@@ -29,7 +29,7 @@
           <block wx:for="{{items}}" wx:key="item">
             <view class="language-list">
               <!-- <navigator url="/pages/images/photo?id={{item.id}}"> -->
-                <view class="language-list-info" index="{{index}}">
+                <view data-courseid="{{index}}" bindtap="gotolesson" class="language-list-info" index="{{index}}">
                   <image class="language-list-photo" src="{{item.imageUrl}}"/>
                   <view class="view-count">
                      <text class="view-count-text">{{item.view_count}}阅读</text>

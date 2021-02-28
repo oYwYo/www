@@ -52,6 +52,7 @@ Page({
       // 获取到用户的信息了，打印到控制台上看下
       console.log("用户的信息如下：");
       console.log(user);
+      wx.setStorageSync('userinfo', user)
       //授权成功后,通过改变 isHide 的值，让实现页面显示出来，把授权页面隐藏起来
       that.data.lee
       if (that.data.lee == '') {
@@ -64,7 +65,7 @@ Page({
             flag: (!that.data.flag),
             lee: true
           })
-        that.wxlogin();
+        // that.wxlogin();
       } else if (!that.data.lee) {
         wx.switchTab({
           url: "/pages/home/home"
@@ -92,12 +93,12 @@ Page({
 
     var that = this;
     //调用共通的登录方法
-    app.util.getUserInfo(
-      function(userinfo) {
-        that.setData({
-          userinfo: userinfo
-        })
-      });
+    // app.util.getUserInfo(
+    //   function(userinfo) {
+    //     that.setData({
+    //       userinfo: userinfo
+    //     })
+    //   });
 
   },
 
@@ -111,6 +112,12 @@ Page({
       })
       return
     } else {
+
+      // 跳过登陆暂时跳转，后续待改
+      wx.switchTab({
+        url: "/pages/home/home"
+      })
+
       wx.checkSession({
         success: function(res) {
           console.log(e.detail.errMsg)
@@ -184,10 +191,7 @@ Page({
         },
 
         fail: function() {
-
           console.log("session_key 已经失效，需要重新执行登录流程");
-
-
           that.wxlogin(); //重新登录
         }
 

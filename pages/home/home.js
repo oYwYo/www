@@ -109,7 +109,32 @@ Page({
       that.setData({
         parameter: parameterList
       })
-    }
+    },
+
+    gotolesson:function(event)
+    {
+      var courseid = event.currentTarget.dataset.courseid;
+      console.log(courseid)
+      wx.showModal({
+         content: '确定要报名该课程？',
+         showCancel: true,//是否显示取消按钮
+         cancelText:"否",//默认是“取消”
+         confirmText:"是",//默认是“确定”
+         confirmColor: '#f5a614',//确定文字的颜色
+         success: function (res) {
+            if (res.cancel) {
+               //点击取消,默认隐藏弹框
+            } else {
+               //点击确定
+               console.log("进入课程")
+               wx.navigateTo({
+                 url: '../lesson/lesson?id='+courseid,
+               })
+            }
+            
+         },
+      })
+    },
 
 })
 

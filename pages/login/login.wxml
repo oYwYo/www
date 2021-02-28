@@ -21,7 +21,7 @@
                  <view wx:if="{{canIUse}}">
                     <view class="" >
                         <button class="{{flag?'show':'hide'}}" open-type="getUserInfo" lang="zh_CN"  bindgetuserinfo="bindGetUserInfo">{{AuthorizedLogin}}</button>
-                    <button class="{{flag?'hide':'show'}}"  lang="zh_CN" open-type='getPhoneNumber'  bindgetphonenumber="getPhoneNumber">{{UserPhone}}</button>
+                        <button class="{{flag?'hide':'show'}}"  lang="zh_CN" open-type='getPhoneNumber'  bindgetphonenumber="getPhoneNumber">{{UserPhone}}</button>
                     </view>
                 </view>
                 <view wx:else>请升级微信版本</view>
