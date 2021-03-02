@@ -1,0 +1,39 @@
+<view class='user-container'>
+  <view class='user-info'>
+    <view>
+      <image animation="{{animationData}}" class="userinfo-avatar" src="{{avatarUrl}}"></image>
+    </view>
+    <view><text class="userinfo-nickname">{{nickName}}</text></view>
+  </view>
+</view>
+
+<view class="line1" />
+
+<view class="lesson">
+  <block wx:for="{{lessons}}" wx:key="item">
+    <view class="lesson-list">
+      <!-- <navigator url="/pages/images/photo?id={{item.id}}"> -->
+      <view class="lesson_today_text" index="{{index}}">
+        <text class="lesson-list-desc">{{item.title}}</text>
+        <image class="lesson-list-photo" src="{{item.imageUrl}}" />
+        <cover-image class="icon-small" src='../images/line.png' size="23"></cover-image>
+        <text class="must">状态：</text>
+        <view class="date-count">
+          <text class="date-count-text">{{item.state}}点评</text>
+        </view>
+        <view class="start">
+          <text class="qq">查看详情</text>
+        </view>
+        <image class="arrow" src=" {{isFold?'../images/arrow_down.png':'../images/arrow_up.png'}}" bindtap="showAll">
+        </image>
+      </view>
+      <view class="long-dec {{isFold?'hide':'show'}}">
+        <text class="first-dec">
+          点评：
+          你可真是个小天才啊。
+        </text>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </block>
+</view>

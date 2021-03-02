@@ -1,15 +1,16 @@
 {
   "pages": [
-   
-    "pages/home/home",
-    "pages/exercise/exercise",
-    "pages/login/login",
     "pages/mine/mine",
+    "pages/login/login",
+    "pages/home/home",
+    "pages/lessonlist/lessonlist",
+    
+    "pages/myquestions/myquestions", 
+    "pages/exercise/exercise",
     "pages/lesson/lesson",
     "pages/myexercises/myexercises",
     "pages/mylessons/mylessons",
     "pages/mymessages/mymessages",
-    "pages/myquestions/myquestions",
     "pages/myrecents/myrecents",
     "pages/logs/logs"
     

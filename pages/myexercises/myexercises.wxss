@@ -1,0 +1,153 @@
+.user-container {
+  background-image: url('https://lostandfoundv2.yiwangchunyu.wang/media/dynamic/2021/2/28/20210228165012_31561.jpg');
+  background-size: 100% 100%;
+  padding-top: 50rpx;
+  padding-bottom: 50rpx;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f3f6fc;
+}
+
+.user-info {
+  margin: auto;
+  flex-direction: row;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 230rpx;
+}
+
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 100rpx;
+  border: 2px solid #f5a614;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 23rpx;
+}
+
+.userinfo-nickname {
+  font-size: 32rpx;
+  text-align: center;
+  color: rgb(65, 65, 65);
+}
+
+.line1 {
+  background-color: rgb(158, 158, 158);
+  height: 2px;
+}
+
+.lesson-list {
+  top: 20rpx;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  background-color: #fff;
+  border: 2px solid rgb(75, 75, 75);
+  border-radius: 10px;
+  margin-top: 15rpx;
+}
+
+.lesson_today_text {
+  position: relative;
+  color: rgb(15, 15, 15);
+}
+
+.lesson-list-photo {
+  width: 500rpx;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+
+.lesson-list-desc {
+  top: 300rpx;
+  display: block;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  width: 97.5%;
+  text-align: center;
+  font-size: 25rpx;
+  padding: 10rpx;
+  opacity: 0.7;
+  border-radius: 10rpx;
+}
+
+.must {
+  position: absolute;
+  right: 60rpx;
+  top: 50rpx;
+  padding: 5rpx 10rpx;
+  border-radius: 20rpx;
+  font-size: 28rpx;
+}
+
+.date-count {
+  position: absolute;
+  right: 10rpx;
+  top: 120rpx;
+  background: #f5a614;
+  padding: 10rpx 32rpx;
+  border-radius: 25rpx;
+  font-size: 23rpx;
+}
+
+.date-count-text {
+  color: #fff;
+}
+
+.icon-small {
+  display: inline-block;
+  vertical-align: top;
+  width: 1px;
+  height: 310rpx;
+}
+
+.long-dec {
+  padding-left: 20rpx;
+  display: -webkit-box;/*关键属性*/
+  word-break: break-all;
+  -webkit-box-orient: vertical;/* 关键属性 */
+  -webkit-line-clamp: 1;/* 关键属性 */
+  overflow: hidden;/* 关键属性 */
+  text-overflow: ellipsis;/* 超出内容显示省略号*/
+}
+
+.start{
+  position: absolute;
+  right: 10rpx;
+  top: 200rpx;
+  background-color: #fff;
+  border: 1px solid #f5a614;
+  width: 145rpx;
+  height: 47rpx;
+  border-radius: 50rpx;
+}
+
+.qq{
+  padding-left: 15rpx;
+  font-size: 22rpx;
+  color: #f5a614;
+}
+
+.hide {
+  display: -webkit-box;
+}
+
+.show {
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  right: 12rpx;
+  top: 213rpx;
+  width: 20rpx;
+  height: 25rpx;
+  transform: translate(-80%);
+}

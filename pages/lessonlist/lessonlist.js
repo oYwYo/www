@@ -5,82 +5,21 @@ Page({
    * 页面的初始数据
    */
   data: {
-    currentIndex: 0,
-    imgs1: [
-      '../images/main.png', '../images/main.png',
-    ],
-    imgs2: [
-      '../images/fake_index.png', '../images/fake_index.png',
-    ],
-    imgUrls: [
-      '../images/main.png', '../images/main.png',
-    ],
-    chosen_items: "",
-    "items": [{
-        "id": "1",
-        "imageUrl": "../images/shanghai.jpg",
-        "content": "上海话",
-        "view_count": "100",
-      },
-      {
-        "id": "2",
-        "imageUrl": "../images/nanjing.png",
-        "content": "南京话",
-        "view_count": "200",
-      },
-      {
-        "id": "3",
-        "imageUrl": "../images/sichuan.jpg",
-        "content": "四川话",
-        "view_count": "300",
-      },
-      {
-        "id": "4",
-        "imageUrl": "../images/yue.jpg",
-        "content": "粤语",
-        "view_count": "400",
-      },
-    ],
     "lessons": [{
         "id": "1",
         "imageUrl": "../images/nanjing1.png",
         "title": "南京话-基础班-红楼梦第一章01",
-        "date_count": "5",
+        "homework": "有",
         "state": 1,
       },
       {
         "id": "2",
         "imageUrl": "../images/nanjing2.png",
         "title": "南京话-基础班-红楼梦第一章02",
-        "date_count": "4",
+        "homework": "有",
         "state": 0,
       },
     ],
-    indicatorDots: true,
-    autoplay: true,
-    interval: 5000,
-    duration: 1000,
-    parameter: [{
-      id: -1,
-      name: '全部'
-    }, {
-      id: 0,
-      name: '上海话'
-    }, {
-      id: 1,
-      name: '南京话'
-    }, {
-      id: 2,
-      name: '四川话'
-    }, {
-      id: 3,
-      name: '粤语'
-    }],
-    navTab: ['自主学习', '今日练习'],
-    currentTab: 0,
-    sendList: ['AA', 'BB'],
-    tab1: 'tabshow',
-    tab2: 'tabhide',
   },
 
   currentTab: function (e) {
@@ -106,10 +45,27 @@ Page({
       });
     }
   },
-  gotoex: function () {
-    console.log("开始练习")
-    wx.navigateTo({
-      url: '../exercise/exercise',
+  gotole: function (event) {
+    var courseid = event.currentTarget.dataset.courseid;
+    console.log(courseid)
+    wx.showModal({
+      content: '确定要学习该章节？',
+      showCancel: true, //是否显示取消按钮
+      cancelText: "否", //默认是“取消”
+      confirmText: "是", //默认是“确定”
+      confirmColor: '#f5a614', //确定文字的颜色
+      success: function (res) {
+        if (res.cancel) {
+          //点击取消,默认隐藏弹框
+        } else {
+          //点击确定
+          console.log("进入章节")
+          wx.navigateTo({
+            url: '../lesson/lesson?id=' + courseid,
+          })
+        }
+
+      },
     })
   },
 
@@ -161,7 +117,7 @@ Page({
           //点击确定
           console.log("进入课程")
           wx.navigateTo({
-            url: '../lessonlist/lessonlist?id=' + courseid,
+            url: '../lesson/lesson?id=' + courseid,
           })
         }
 

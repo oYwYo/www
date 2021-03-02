@@ -1,0 +1,10 @@
+<view class='user-container'>
+  <view class='user-info'>
+    <view>
+      <image animation="{{animationData}}" class="userinfo-avatar" src="{{avatarUrl}}"></image>
+    </view>
+    <view><text class="userinfo-nickname">{{nickName}}</text></view>
+  </view>
+</view>
+
+<view class="line1" />

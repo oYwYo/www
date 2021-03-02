@@ -1,0 +1,18 @@
+<view class="lesson">
+  <block wx:for="{{lessons}}" wx:key="item">
+    <view class="lesson-list">
+      <!-- <navigator url="/pages/images/photo?id={{item.id}}"> -->
+      <view class="lesson_today_text" index="{{index}}">
+        <image class="lesson-list-photo" src="{{item.imageUrl}}" />
+        <cover-image class="icon-small" src='../images/line.png' size="23"></cover-image>
+        <text class="must">作业情况：</text>
+        <view class="date-count">
+          <text class="date-count-text">{{item.homework}}课后作业</text>
+        </view>
+        <view bindtap="gotole" class="start">开始学习></view>
+        <text class="lesson-list-desc">{{item.title}}</text>
+      </view>
+      <!-- </navigator> -->
+    </view>
+  </block>
+</view>

@@ -18,7 +18,7 @@
 	</view>
 </form>
 <view class='btn-container'>
-	<button open-type="contact" class='agree-btn-cls'  plain="true" type="primary">点击联系客服</button>
+	<button open-type="contact" class='agree-btn-cls'  >点击联系客服</button>
 </view>
 <view class='footer'>
 	<view class='text-container'>
