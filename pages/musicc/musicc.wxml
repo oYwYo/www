@@ -1,0 +1,14 @@
+<image mode="widthFix" class="music-image" src="{{mush[number].coverImgUrl}}"></image>
+<view class="music-title">{{mush[number].title}}</view>
+<view class="music-name">{{mush[number].name}}</view>
+<view class="music-button">
+<view bindtap="song" data-song="last">上一首</view>
+<view bindtap="music">{{play?'暂停':'播放'}}</view>
+<view bindtap="song" data-song="next">下一首</view>
+</view>
+<view class="cu-progress">
+  <view class="cu-prucin" style="width:{{widthx}}%"></view>
+  <view class="cu-left">{{playback}}</view>
+  <view class="cu-right">{{duration}}</view>
+</view>
+

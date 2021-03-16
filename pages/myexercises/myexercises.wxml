@@ -30,7 +30,7 @@
       <view class="long-dec {{isFold?'hide':'show'}}">
         <text class="first-dec">
           点评：
-          你可真是个小天才啊。
+          语音标准，吐字清楚、准确，语言生动，语气、语调、声音、节奏富于变化，轻重缓急、抑扬顿挫切合诗歌朗诵的内容，能准确、恰当地表情达意，舒心悦耳，娓娓动听。请继续努力！
         </text>
       </view>
       <!-- </navigator> -->

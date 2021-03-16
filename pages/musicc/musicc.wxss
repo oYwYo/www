@@ -1,0 +1,63 @@
+page{
+  background-image:linear-gradient(45deg, #FBE7E5, #65322F);
+}
+
+.music-button{
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  padding: 0 6% 0 3%;
+}
+.music-button>view{
+  width: 30.33%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background: #fff;
+  margin-left: 3%;
+  float: left;
+  overflow: hidden;
+  border-radius: 10rpx;
+  font-size: 24rpx;
+}
+.cu-progress{
+  height: 6rpx;
+  width: 90%;
+  float: left;
+  background-color: rgba(240, 240, 240, 0.2);
+  margin: 5% 5% 0 5%;
+  border-radius: 20rpx;
+  position: relative; 
+}
+.cu-prucin{
+  height: 100%;
+  background-color: #fff;
+  float: left;
+  position: relative;
+}
+.cu-prucin::after{
+  border-radius: 50%;
+	background: white;
+	position: absolute;
+	right: 0rpx;
+	content: '';
+	display: block;
+  margin: calc((6rpx - 14rpx)/2);
+	width: 14rpx;
+	height: 14rpx;
+}
+.cu-left{
+  position: absolute;
+  left: 0;
+  margin-top: 16rpx;
+  color: rgba(240, 240, 240, 0.8);
+  font-size: 22rpx;
+}
+.cu-right{
+  position: absolute;
+  right: 0;
+  margin-top: 16rpx;
+  color: rgba(240, 240, 240, 0.4);
+  font-size: 22rpx;
+}
+

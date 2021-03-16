@@ -13,11 +13,21 @@
 	<view class="record-image">
 		<image class="record-img" src="{{exercise_record[0].url}}"></image>
 	</view>
+
+	<view class="cu-progress">
+		<view class="cu-prucin" style="width:{{widthx}}%"></view>
+		<view class="cu-left">{{playback}}</view>
+		<view class="cu-right">{{duration}}</view>
+	</view>
+
+
 	<view class="button-group-cls">
-		<view bindtap="" class="original1">听原音▸</view>
+		<view class="music-button">
+			<view bindtap="music">{{play?'暂停':'听原音▸'}}</view>
+		</view>
 		<view bindtap="" class="original1">开始录音</view>
 	</view>
-	<view class="button-group-cls">
+	<view class="button-group-cls2">
 		<view bindtap="" class="original2">重录</view>
 		<view bindtap="" class="original3">回听录音▸</view>
 		<view bindtap="" class="original2">提交</view>
@@ -32,22 +42,23 @@
 	</view>
 
 	<view class="big">
-	<view class="weui-uploader">
-		<view class="button-group-cls">
-			<view bindtap="chooseImg" class="original4">添加图片</view>
-		</view>
-		<view class="img-v weui-uploader__bd">
-			<view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
-				<image class='weui-uploader__img ' src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg">
-					<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
-				</image>
+		<view class="weui-uploader">
+			<view class="button-group-cls2">
+				<view bindtap="chooseImg" class="original4">添加图片</view>
+			</view>
+			<view class="img-v weui-uploader__bd">
+				<view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+					<image class='weui-uploader__img ' src="{{item}}" data-index="{{index}}" mode="aspectFill"
+						bindtap="previewImg">
+						<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+					</image>
+				</view>
 			</view>
 		</view>
+		<view class="button-group-cls2">
+			<view bindtap="chooseImg" class="original4">提交</view>
+		</view>
 	</view>
-	<view class="button-group-cls">
-		<view bindtap="chooseImg" class="original4">提交</view>
-	</view>
-</view>
 
 
 </view>
