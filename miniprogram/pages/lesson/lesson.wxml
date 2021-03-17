@@ -3,3 +3,6 @@
 	<view class="record-image">
 		<video class="record-img" style="width: 100%;height=400px;margin:1px;" src="{{lesson_video[0].url}}"binderror="videoErrorCallback"></video>
 	</view>
+	<view class="record-image">
+		<video class="record-img" style="width: 100%;height=400px;margin:1px;" src="cloud://clp-env-7g9v8n7qd52bb686.636c-clp-env-7g9v8n7qd52bb686-1305269848/video/yb.mp4"binderror="videoErrorCallback"></video>
+	</view>

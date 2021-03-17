@@ -11,6 +11,13 @@ Page({
     flag: true
   },
   onLoad: function() {
+    wx.cloud.callFunction({
+      name: 'getOpenid',
+      success: function(res) {
+        console.log('openid', res.result.openid)
+      },
+      fail: console.err
+    })
     var that = this;
     // 查看是否授权
     //获取用户本地是否是第一次进入新版本
